@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converse Chat</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/7.0.5/signalr.min.js"></script>
+</head>
+<body>
+    <div id="auth-container" class="auth-container">
+        <h2>Converse Chat</h2>
+        
+        <div class="form-section">
+            <h3>Register</h3>
+            <input type="text" id="registerPhone" placeholder="Enter your Phone Number">
+            <input type="text" id="registerName" placeholder="Enter your Name">
+            <button id="registerBtn">Register</button>
+        </div>
+        
+        <div class="form-section">
+            <h3>Sign In</h3>
+            <input type="text" id="userId" placeholder="Enter your Phone Number">
+            <button id="connectBtn">Sign In</button>
+        </div>
+    </div>
+
+    <div id="chat-container" class="chat-container" style="display: none;">
+        <div class="chat-list">
+            <input type="text" id="search" placeholder="Search...">
+            <div id="chatList"></div>
+            <button id="settingsBtn">⚙️</button>
+        </div>
+        <div class="chat-content">
+            <h2>Converse Chat</h2>
+
+            <div class="user-profile">
+                <h3>User Profile</h3>
+                <input type="text" id="displayName" placeholder="Display Name">
+                <input type="text" id="statusMessage" placeholder="Status Message">
+                <button id="saveProfileBtn">Save Profile</button>
+            </div>
+
+            <div class="group-section">
+                <h3>Group Chat</h3>
+                <input type="text" id="groupName" placeholder="Group Name">
+                <button id="createGroupBtn">Create Group</button>
+                <input type="text" id="groupMemberPhone" placeholder="Member Phone">
+                <button id="addMemberBtn">Add Member</button>
+                <button id="removeMemberBtn">Remove Member</button>
+            </div>
+
+            <div class="chat-section">
+                <div id="messages" class="messages"></div>
+                <div class="typing-indicator" id="typingIndicator">Someone is typing...</div>
+                <div class="message-input">
+                    <input type="text" id="receiver" placeholder="Receiver Phone">
+                    <input type="text" id="message" placeholder="Type a message">
+                    <button id="sendBtn">Send</button>
+                    <input type="file" id="fileInput">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/app.js"></script>
+</body>
+</html>
